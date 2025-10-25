@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import BenefitsSection from "./components/BenefitsSection";
 
 const sampleTutors = [
   {
@@ -61,10 +62,66 @@ export default function HomePage() {
   }
 
   return (
-    <div className="bg-linear-to-b from-white to-slate-50 min-h-screen text-slate-900">
+    <div className="min-h-screen text-slate-900">
       <main className="">
-        <div className="bg-linear-to-b from-primary/30 to-white">
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center py-32">
+        <div className="relative bg-linear-to-b from-primary/60 to-background overflow-hidden">
+          <svg
+            className="absolute left-0 top-5 w-96 aspect-square z-0 opacity-30"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern
+                id="pattern-dots"
+                x="0"
+                y="0"
+                width="20"
+                height="20"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="2" cy="2" r="1.6" fill="#ffffff" />
+              </pattern>
+
+              <linearGradient id="hero-grad" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stopColor="#93C5FD" stopOpacity="0.12" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.03" />
+              </linearGradient>
+            </defs>
+
+            <rect width="100%" height="100%" fill="url(#pattern-dots)" />
+            <rect width="100%" height="100%" fill="url(#hero-grad)" />
+          </svg>
+
+          <svg
+            className="absolute right-0 top-5 w-96 aspect-square z-0 opacity-30"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern
+                id="pattern-dots"
+                x="0"
+                y="0"
+                width="20"
+                height="20"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="2" cy="2" r="1.6" fill="#ffffff" />
+              </pattern>
+
+              <linearGradient id="hero-grad" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stopColor="#93C5FD" stopOpacity="0.12" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.03" />
+              </linearGradient>
+            </defs>
+
+            <rect width="100%" height="100%" fill="url(#pattern-dots)" />
+            <rect width="100%" height="100%" fill="url(#hero-grad)" />
+          </svg>
+
+          <div className="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center py-32">
             <div className="md:col-span-6 space-y-6">
               <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
                 Kết nối gia sư chất lượng. Nâng bước tương lai.
@@ -76,8 +133,12 @@ export default function HomePage() {
               </p>
 
               <div className="space-x-3">
-                <Button className="text-lg p-8">Tìm gia sư ngay</Button>
-                <Button className="text-lg p-8">Hỗ trợ tìm gia sư 24/7</Button>
+                <Button className="text-lg p-8 rounded-4xl">
+                  Tìm gia sư ngay
+                </Button>
+                <Button className="text-lg p-8 rounded-4xl">
+                  Hỗ trợ tìm gia sư 24/7
+                </Button>
               </div>
             </div>
 
@@ -95,37 +156,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <section id="testimonials" className="py-12 container mx-auto">
-          <h2 className="text-2xl font-bold mb-6">Phản hồi từ phụ huynh</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <blockquote className="bg-white rounded p-4 shadow">
-              <p className="text-slate-600">
-                "Chúng tôi tìm được gia sư phù hợp cho con chỉ trong 2 ngày. Rất
-                hài lòng!"
-              </p>
-              <cite className="block mt-3 text-sm text-slate-500">
-                — Phụ huynh ở Hà Nội
-              </cite>
-            </blockquote>
-            <blockquote className="bg-white rounded p-4 shadow">
-              <p className="text-slate-600">
-                "AI gợi ý giúp tôi tiết kiệm nhiều thời gian so với tìm thủ
-                công."
-              </p>
-              <cite className="block mt-3 text-sm text-slate-500">
-                — Phụ huynh ở TP.HCM
-              </cite>
-            </blockquote>
-            <blockquote className="bg-white rounded p-4 shadow">
-              <p className="text-slate-600">
-                "Gia sư chuyên nghiệp, con tiến bộ rõ rệt sau 1 tháng."
-              </p>
-              <cite className="block mt-3 text-sm text-slate-500">
-                — Phụ huynh ở Đà Nẵng
-              </cite>
-            </blockquote>
-          </div>
-        </section>
+        <BenefitsSection />
       </main>
     </div>
   );

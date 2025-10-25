@@ -5,11 +5,13 @@ import React from "react";
 const PublicLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-      <div className="bg-white sticky top-0 z-50">
+      <div className="bg-background sticky top-0 z-50">
         <header className="flex items-center justify-between container mx-auto py-8">
           <div className="flex items-end space-x-10">
-            <p className="text-4xl font-bold text-primary">VietTutor</p>
-            <nav className="flex justify-between space-x-5 text-lg">
+            <p className="text-4xl font-bold text-primary uppercase">
+              VietTutor
+            </p>
+            <nav className="flex justify-between items-center space-x-5 text-lg">
               <div className="hover:underline">
                 <Link href="/">Giới thiệu</Link>
               </div>
@@ -25,11 +27,15 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
             </nav>
           </div>
           <div className="flex items-center space-x-4">
-            <Button size={"lg"} variant={"outline"} className="text-base">
+            <Button
+              size={"lg"}
+              variant={"outline"}
+              className="text-base rounded-3xl"
+            >
               Đăng nhập
             </Button>
             {/* <Button size={"lg"}>Dành cho phụ huynh</Button> */}
-            <Button size={"lg"} className="text-base">
+            <Button size={"lg"} className="text-base rounded-3xl">
               Trở thành gia sư
             </Button>
           </div>
