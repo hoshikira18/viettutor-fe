@@ -31,36 +31,34 @@ const faqs = [
 
 export default function QnA() {
   return (
-    <div className="bg-linear-to-b from-background to-primary/20">
-      <section className="py-12 container mx-auto">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">
-            Giải đáp mọi thắc mắc của Phụ huynh.
-          </h2>
-          <p className="text-center text-slate-600 mt-2">
-            Những câu hỏi phổ biến - nhấp để mở câu trả lời.
-          </p>
+    <section className="py-12 container mx-auto">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center">
+          Giải đáp mọi thắc mắc của Phụ huynh.
+        </h2>
+        <p className="text-center text-slate-600 mt-2">
+          Những câu hỏi phổ biến - nhấp để mở câu trả lời.
+        </p>
 
-          <div className="mt-6 space-y-3">
-            <Accordion type="single" defaultValue="item-0" collapsible>
-              {faqs.map((f, i) => (
-                <AccordionItem
-                  key={i}
-                  value={`item-${i}`}
-                  className="rounded-lg overflow-hidden"
-                >
-                  <AccordionTrigger>
-                    <span className="font-medium">{f.q}</span>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <p className="text-sm leading-relaxed pt-2">{f.a}</p>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
+        <div className="mt-6 space-y-3">
+          <Accordion type="single" defaultValue="item-0" collapsible>
+            {faqs.map((f, i) => (
+              <AccordionItem
+                key={i}
+                value={`item-${i}`}
+                className="rounded-lg overflow-hidden"
+              >
+                <AccordionTrigger>
+                  <span className="font-medium text-base">{f.q}</span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-base leading-relaxed pt-2">{f.a}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
