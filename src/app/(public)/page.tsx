@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import BenefitsSection from "./components/BenefitsSection";
+import StepsSection from "./components/StepsSection";
 
 const sampleTutors = [
   {
@@ -157,6 +158,7 @@ export default function HomePage() {
         </div>
 
         <BenefitsSection />
+        <StepsSection />
       </main>
     </div>
   );
