@@ -5,8 +5,8 @@ import React from "react";
 const PublicLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-      <div className="bg-white sticky top-0 z-50 shadow">
-        <header className="flex items-center justify-between container mx-auto py-10">
+      <div className="bg-white sticky top-0 z-50">
+        <header className="flex items-center justify-between container mx-auto py-8">
           <div className="flex items-end space-x-10">
             <p className="text-4xl font-bold text-primary">VietTutor</p>
             <nav className="flex justify-between space-x-5 text-lg">
@@ -25,11 +25,13 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
             </nav>
           </div>
           <div className="flex items-center space-x-4">
-            <Button size={"lg"} variant={"outline"}>
+            <Button size={"lg"} variant={"outline"} className="text-base">
               Đăng nhập
             </Button>
-            <Button size={"lg"}>Dành cho phụ huynh</Button>
-            <Button size={"lg"}>Trở thành gia sư</Button>
+            {/* <Button size={"lg"}>Dành cho phụ huynh</Button> */}
+            <Button size={"lg"} className="text-base">
+              Trở thành gia sư
+            </Button>
           </div>
         </header>
       </div>

@@ -63,10 +63,10 @@ export default function HomePage() {
   return (
     <div className="bg-linear-to-b from-white to-slate-50 min-h-screen text-slate-900">
       <main className="">
-        <div className="bg-primary/20">
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center py-28">
+        <div className="bg-linear-to-b from-primary/30 to-white">
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center py-32">
             <div className="md:col-span-6 space-y-6">
-              <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
                 Kết nối gia sư chất lượng. Nâng bước tương lai.
               </h1>
               <p className="text-lg text-slate-600">
@@ -75,72 +75,10 @@ export default function HomePage() {
                 của bạn.
               </p>
 
-              <form
-                onSubmit={handleSearch}
-                className="bg-white shadow rounded-md p-4"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                  <label className="flex flex-col">
-                    <span className="text-xs text-slate-500">Môn học</span>
-                    <input
-                      aria-label="Môn học"
-                      value={subject}
-                      onChange={(e) => setSubject(e.target.value)}
-                      className="mt-1 p-2 border rounded"
-                      placeholder="Ví dụ: Toán, Tiếng Anh"
-                    />
-                  </label>
-                  <label className="flex flex-col">
-                    <span className="text-xs text-slate-500">Khu vực</span>
-                    <input
-                      aria-label="Khu vực"
-                      value={location}
-                      onChange={(e) => setLocation(e.target.value)}
-                      className="mt-1 p-2 border rounded"
-                      placeholder="Thành phố hoặc "
-                    />
-                  </label>
-                  <label className="flex flex-col">
-                    <span className="text-xs text-slate-500">Trình độ</span>
-                    <select
-                      aria-label="Trình độ"
-                      value={level}
-                      onChange={(e) => setLevel(e.target.value)}
-                      className="mt-1 p-2 border rounded"
-                    >
-                      <option value="">Tất cả</option>
-                      <option>Tiểu học</option>
-                      <option>Trung học</option>
-                      <option>THPT</option>
-                      <option>Đại học</option>
-                    </select>
-                  </label>
-                </div>
-
-                <div className="flex gap-3 mt-4">
-                  <Button type="submit" className="p-6 text-lg">
-                    Tìm kiếm
-                  </Button>
-                  <Button
-                    type="button"
-                    onClick={handleAiMatch}
-                    className="p-6 text-lg bg-emerald-600 hover:bg-emerald-700"
-                  >
-                    {aiLoading ? "Đang xử lý..." : "AI gợi ý"}
-                  </Button>
-                  <div className="flex-1 text-base text-slate-500 flex items-center">
-                    Hoặc sử dụng AI để nhanh chóng nhận gợi ý phù hợp
-                  </div>
-                </div>
-                {aiResult && (
-                  <div
-                    role="status"
-                    className="mt-3 p-3 bg-slate-50 border rounded text-slate-700"
-                  >
-                    {aiResult}
-                  </div>
-                )}
-              </form>
+              <div className="space-x-3">
+                <Button className="text-lg p-8">Tìm gia sư ngay</Button>
+                <Button className="text-lg p-8">Hỗ trợ tìm gia sư 24/7</Button>
+              </div>
             </div>
 
             <div className="md:col-span-6">
