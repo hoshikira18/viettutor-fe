@@ -6,7 +6,7 @@ export default function StepsSection() {
           3 Bước Đơn giản để tìm Gia sư Chất lượng cho con.
         </h2>
         <p className="text-slate-600 dark:text-slate-400 mt-3">
-          Quy trình ngắn gọn, minh bạch và thân thiện — dành cho phụ huynh bận
+          Quy trình ngắn gọn, minh bạch và thân thiện - dành cho phụ huynh bận
           rộn.
         </p>
       </div>
@@ -21,7 +21,7 @@ export default function StepsSection() {
             <h3 className="text-lg font-semibold">Chia sẻ nhu cầu</h3>
             <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">
               Phụ huynh điền form hoặc liên hệ, mô tả môn học, trình độ và tính
-              cách của con — càng chi tiết càng tốt.
+              cách của con - càng chi tiết càng tốt.
             </p>
           </div>
         </div>

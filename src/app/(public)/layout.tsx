@@ -5,7 +5,7 @@ import React from "react";
 const PublicLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-      <div className="bg-background sticky top-0 z-50">
+      <div className="bg-background sticky top-0 z-50 border-b">
         <header className="flex items-center justify-between container mx-auto py-8">
           <div className="flex items-end space-x-10">
             <p className="text-4xl font-bold text-primary uppercase">
@@ -45,7 +45,7 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
       <footer className="py-12 text-sm text-slate-500 container mx-auto">
         <div className="border-t pt-6 flex flex-col md:flex-row items-center justify-between">
           <div>
-            © {new Date().getFullYear()} VietTutor — Kết nối gia sư & phụ huynh
+            © {new Date().getFullYear()} VietTutor - Kết nối gia sư & phụ huynh
           </div>
           <div className="space-x-4 mt-3 md:mt-0">
             <a href="#">Chính sách</a>

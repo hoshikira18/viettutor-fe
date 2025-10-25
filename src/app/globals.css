@@ -116,7 +116,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Use Inter loaded via next/font — the variable is set on the <body> element */
+    /* Use Inter loaded via next/font - the variable is set on the <body> element */
     font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   }
   button{

@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import BenefitsSection from "./components/BenefitsSection";
 import StepsSection from "./components/StepsSection";
+import CTASection from "./components/CTASection";
+import QnA from "./components/QnA";
 
 const sampleTutors = [
   {
@@ -57,7 +59,7 @@ export default function HomePage() {
     setTimeout(() => {
       setAiLoading(false);
       setAiResult(
-        `Gợi ý: ${sampleTutors[0].name} — ${sampleTutors[0].subject} (${sampleTutors[0].price}). Bạn có thể bắt đầu chat để tinh chỉnh yêu cầu.`
+        `Gợi ý: ${sampleTutors[0].name} - ${sampleTutors[0].subject} (${sampleTutors[0].price}). Bạn có thể bắt đầu chat để tinh chỉnh yêu cầu.`
       );
     }, 1100);
   }
@@ -159,6 +161,8 @@ export default function HomePage() {
 
         <BenefitsSection />
         <StepsSection />
+        {/* <CTASection /> */}
+        <QnA />
       </main>
     </div>
   );
