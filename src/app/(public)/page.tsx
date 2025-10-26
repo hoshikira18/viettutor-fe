@@ -97,7 +97,7 @@ export default function HomePage() {
           </svg>
 
           <svg
-            className="absolute right-0 top-5 w-96 aspect-square z-0 opacity-30"
+            className="absolute right-0 top-5 w-96 hidden md:block aspect-square z-0 opacity-30"
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
@@ -135,11 +135,11 @@ export default function HomePage() {
                 của bạn.
               </p>
 
-              <div className="space-x-3 animate-fade">
-                <Button className="text-lg p-8 rounded-4xl">
+              <div className="space-x-3 animate-fade space-y-3 lg:space-y-0">
+                <Button className="text-lg p-6 md:p-8 rounded-4xl">
                   Tìm gia sư ngay
                 </Button>
-                <Button className="text-lg p-8 rounded-4xl">
+                <Button className="text-lg p-6 md:p-8 rounded-4xl">
                   Hỗ trợ tìm gia sư 24/7
                 </Button>
               </div>
