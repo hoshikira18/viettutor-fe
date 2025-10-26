@@ -1,6 +1,6 @@
 export default function StepsSection() {
   return (
-    <section className="relative pt-6 md:pt-40 pb-20 md:-mt-8 container mx-auto">
+    <section className="relative pt-6 md:pt-40 pb-20 md:-mt-8 container px-4 mx-auto">
       <div className="max-w-4xl mx-auto text-center mb-6">
         <h2 className="text-3xl md:text-4xl font-bold">
           3 Bước Đơn giản để tìm Gia sư Chất lượng cho con.
@@ -11,7 +11,7 @@ export default function StepsSection() {
         </p>
       </div>
 
-      <div className="relative flex flex-col md:flex-row items-center justify-between gap-6 mt-2 md:mt-6">
+      <div className="relative flex flex-col lg:flex-row items-center justify-between gap-6 mt-2 md:mt-6">
         {/* Step 1 */}
         <div className="flex-1 bg-white dark:bg-slate-800 border rounded-2xl p-6 flex items-start gap-4">
           <div className="shrink-0 w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
@@ -27,7 +27,7 @@ export default function StepsSection() {
         </div>
 
         {/* Arrow for md+ */}
-        <div className="hidden md:flex items-center justify-center w-12">
+        <div className="hidden lg:flex items-center justify-center w-12">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-8 h-8 text-slate-300"
@@ -59,7 +59,7 @@ export default function StepsSection() {
         </div>
 
         {/* Arrow for md+ */}
-        <div className="hidden md:flex items-center justify-center w-12">
+        <div className="hidden lg:flex items-center justify-center w-12">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-8 h-8 text-slate-300"
@@ -91,7 +91,7 @@ export default function StepsSection() {
         </div>
       </div>
       <iframe
-        className="w-3/4 mx-auto aspect-video rounded-2xl mt-10"
+        className="w-full lg:w-3/4 mx-auto aspect-video rounded-2xl mt-10"
         src="https://www.youtube.com/embed/ALJyAjs6fqg?si=p74TkUjcBkTk68vQ&amp;controls=0"
         title="YouTube video player"
         frameBorder="0"

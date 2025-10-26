@@ -124,18 +124,18 @@ export default function HomePage() {
             <rect width="100%" height="100%" fill="url(#hero-grad)" />
           </svg>
 
-          <div className="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center py-32">
+          <div className="relative z-10 container px-4 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-32">
             <div className="md:col-span-6 space-y-6">
-              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight animate-fade">
                 Kết nối gia sư chất lượng. Nâng bước tương lai.
               </h1>
-              <p className="text-lg text-slate-600">
+              <p className="text-lg text-slate-600 animate-fade">
                 Tìm gia sư cho mọi trình độ và môn học. Chúng tôi sử dụng AI để
                 gợi ý những gia sư phù hợp dựa trên nhu cầu học tập và lịch học
                 của bạn.
               </p>
 
-              <div className="space-x-3">
+              <div className="space-x-3 animate-fade">
                 <Button className="text-lg p-8 rounded-4xl">
                   Tìm gia sư ngay
                 </Button>

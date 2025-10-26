@@ -12,7 +12,7 @@ const FeatureCard = ({
   description: string;
 }) => {
   return (
-    <div className="bg-white dark:bg-slate-800 border rounded-2xl p-6 flex flex-col items-start gap-4 shadow-sm">
+    <div className="animate-fade-up bg-white dark:bg-slate-800 border rounded-2xl p-6 flex flex-col items-start gap-4 shadow-sm">
       <div className="flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 text-primary">
         {icon}
       </div>
@@ -38,12 +38,12 @@ const FeatureCard = ({
 
 export default function BenefitsSection() {
   return (
-    <section className="py-12 container mx-auto">
+    <section className="py-12 container px-4 mx-auto">
       <div className="max-w-4xl mx-auto text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold">
+        <h2 className="text-3xl md:text-4xl font-bold animate-fade-up">
           Tại sao hàng ngàn Phụ huynh đã tin chọn VietTutor?
         </h2>
-        <p className="text-slate-600 dark:text-slate-400 mt-3">
+        <p className="text-slate-600 dark:text-slate-400 mt-3 animate-fade-up">
           Các cam kết rõ ràng, bộ lọc thông minh và hỗ trợ 24/7 giúp bạn tìm gia
           sư phù hợp nhanh chóng.
         </p>

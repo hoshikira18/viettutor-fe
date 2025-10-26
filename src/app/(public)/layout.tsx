@@ -1,47 +1,11 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import React from "react";
+import Header from "@/components/ui/Header";
 
 const PublicLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-      <div className="bg-background sticky top-0 z-50 border-b">
-        <header className="flex items-center justify-between container mx-auto py-8">
-          <div className="flex items-end space-x-10">
-            <p className="text-4xl font-bold text-primary uppercase">
-              VietTutor
-            </p>
-            <nav className="flex justify-between items-center space-x-5 text-lg">
-              <div className="hover:underline">
-                <Link href="/">Giới thiệu</Link>
-              </div>
-              <div className="hover:underline">
-                <Link href="/">Tính năng</Link>
-              </div>
-              <div className="hover:underline">
-                <Link href="/">Liên hệ</Link>
-              </div>
-              <div className="hover:underline">
-                <Link href="/">VietTutor Store</Link>
-              </div>
-            </nav>
-          </div>
-          <div className="flex items-center space-x-4">
-            <Button
-              size={"lg"}
-              variant={"outline"}
-              className="text-base rounded-3xl"
-            >
-              Đăng nhập
-            </Button>
-            {/* <Button size={"lg"}>Dành cho phụ huynh</Button> */}
-            <Button size={"lg"} className="text-base rounded-3xl">
-              Trở thành gia sư
-            </Button>
-          </div>
-        </header>
-      </div>
-      {children}
+      <Header />
+      <main className="mt-16 md:mt-20">{children}</main>
       <footer className="py-12 text-sm text-slate-500 container mx-auto">
         <div className="border-t pt-6 flex flex-col md:flex-row items-center justify-between">
           <div>
