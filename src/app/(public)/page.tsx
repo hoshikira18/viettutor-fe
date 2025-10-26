@@ -124,7 +124,7 @@ export default function HomePage() {
             <rect width="100%" height="100%" fill="url(#hero-grad)" />
           </svg>
 
-          <div className="relative z-10 container px-4 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-32">
+          <div className="relative z-10 container px-4 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-20 lg:py-32">
             <div className="md:col-span-6 space-y-6">
               <h1 className="text-4xl md:text-6xl font-extrabold leading-tight animate-fade">
                 Kết nối gia sư chất lượng. Nâng bước tương lai.
@@ -136,10 +136,10 @@ export default function HomePage() {
               </p>
 
               <div className="space-x-3 animate-fade space-y-3 lg:space-y-0">
-                <Button className="text-lg p-6 md:p-8 rounded-4xl">
+                <Button className="text-base md:text-lg p-6 md:p-8 rounded-4xl">
                   Tìm gia sư ngay
                 </Button>
-                <Button className="text-lg p-6 md:p-8 rounded-4xl">
+                <Button className="text-base md:text-lg p-6 md:p-8 rounded-4xl">
                   Hỗ trợ tìm gia sư 24/7
                 </Button>
               </div>

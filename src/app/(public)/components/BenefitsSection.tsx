@@ -38,7 +38,7 @@ const FeatureCard = ({
 
 export default function BenefitsSection() {
   return (
-    <section className="py-12 container px-4 mx-auto">
+    <section className="pt-4 pb-20 lg:py-12 container px-4 mx-auto">
       <div className="max-w-4xl mx-auto text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold animate-fade-up">
           Tại sao hàng ngàn Phụ huynh đã tin chọn VietTutor?
