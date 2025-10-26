@@ -28,6 +28,8 @@ export const metadata: Metadata = {
     countryName: "Vietnam",
     locale: "vi_VN",
     siteName: "VietTutor",
+    phoneNumbers: ["+84 918 707 142"],
+    emails: ["viettutor.work@gmail.com"],
     tags: [
       "gia sư",
       "tìm gia sư",
