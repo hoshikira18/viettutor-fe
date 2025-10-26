@@ -10,9 +10,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "VietTutor - Tìm gia sư chất lượng",
+  title: "VietTutor - Gia sư Việt",
   description:
     "VietTutor - Nền tảng kết nối phụ huynh với gia sư số một Việt Nam.",
+  openGraph: {
+    images: [
+      {
+        url: "https://www.viettutors.cloud/og_image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "VietTutor - Gia sư Việt",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
