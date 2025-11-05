@@ -23,6 +23,13 @@ export default function Header() {
               <Link href="/comming-soon" className="hover:underline">
                 Giới thiệu
               </Link>
+              <Link
+                href="/ai-recommendations"
+                className="hover:underline flex items-center space-x-1"
+              >
+                <span>🤖</span>
+                <span>AI Tìm Gia Sư</span>
+              </Link>
               <Link href="/comming-soon" className="hover:underline">
                 Tính năng
               </Link>
@@ -37,16 +44,20 @@ export default function Header() {
 
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex items-center space-x-4">
-              <Button
-                size={"lg"}
-                variant={"outline"}
-                className="text-base rounded-3xl"
-              >
-                Đăng nhập
-              </Button>
-              <Button size={"lg"} className="text-base rounded-3xl">
-                Trở thành gia sư
-              </Button>
+              <Link href="/signin">
+                <Button
+                  size={"lg"}
+                  variant={"outline"}
+                  className="text-base rounded-3xl"
+                >
+                  Đăng nhập
+                </Button>
+              </Link>
+              <Link href="/tutor-registration">
+                <Button size={"lg"} className="text-base rounded-3xl">
+                  Trở thành gia sư
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -94,6 +105,14 @@ export default function Header() {
                 Giới thiệu
               </Link>
               <Link
+                href="/ai-recommendations"
+                onClick={() => setOpen(false)}
+                className="flex items-center space-x-2 py-2 px-3 rounded hover:bg-accent/10"
+              >
+                <span>🤖</span>
+                <span>AI Tìm Gia Sư</span>
+              </Link>
+              <Link
                 href="/comming-soon"
                 onClick={() => setOpen(false)}
                 className="block py-2 px-3 rounded hover:bg-accent/10"
@@ -117,16 +136,25 @@ export default function Header() {
             </nav>
 
             <div className="flex flex-col gap-2">
-              <Button
-                size={"lg"}
-                variant={"outline"}
-                className="w-full text-base rounded-3xl"
-              >
-                Đăng nhập
-              </Button>
-              <Button size={"lg"} className="w-full text-base rounded-3xl">
-                Trở thành gia sư
-              </Button>
+              <Link href="/signin">
+                <Button
+                  size={"lg"}
+                  variant={"outline"}
+                  className="w-full text-base rounded-3xl"
+                  onClick={() => setOpen(false)}
+                >
+                  Đăng nhập
+                </Button>
+              </Link>
+              <Link href="/tutor-registration">
+                <Button
+                  size={"lg"}
+                  className="w-full text-base rounded-3xl"
+                  onClick={() => setOpen(false)}
+                >
+                  Trở thành gia sư
+                </Button>
+              </Link>
             </div>
           </div>
         ) : null}

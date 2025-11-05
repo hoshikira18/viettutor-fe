@@ -1,0 +1,33 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // User avatars - users can only upload/read their own avatars
+    match /avatars/{userId}/{allPaths=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Child avatars - parents can manage their children's avatars
+    match /children/{childId}/{allPaths=**} {
+      allow read, write: if request.auth != null;
+      // Additional validation would be done in Firestore rules
+    }
+    
+    // Tutor documents and avatars - tutors can manage their own files
+    match /tutors/{tutorId}/{allPaths=**} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == tutorId;
+    }
+    
+    // Session materials - participants can upload/download
+    match /sessions/{sessionId}/{allPaths=**} {
+      allow read, write: if request.auth != null;
+      // Additional validation would be done in Firestore rules
+    }
+    
+    // Public files - readable by authenticated users
+    match /public/{allPaths=**} {
+      allow read: if request.auth != null;
+      allow write: if false; // Only admin can write to public folder
+    }
+  }
+}

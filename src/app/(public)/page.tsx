@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import BenefitsSection from "./components/BenefitsSection";
@@ -8,61 +9,16 @@ import StepsSection from "./components/StepsSection";
 import CTASection from "./components/CTASection";
 import QnA from "./components/QnA";
 
-const sampleTutors = [
-  {
-    id: 1,
-    name: "Nguyễn Văn A",
-    subject: "Toán - Lớp 10-12",
-    rating: 4.9,
-    price: "250k/h",
-    img: "/tutor.jpg",
-  },
-  {
-    id: 2,
-    name: "Trần Thị B",
-    subject: "Tiếng Anh - Giao tiếp",
-    rating: 4.8,
-    price: "200k/h",
-    img: "/tutor.jpg",
-  },
-  {
-    id: 3,
-    name: "Lê Văn C",
-    subject: "Lý - Hóa - Toán",
-    rating: 4.7,
-    price: "220k/h",
-    img: "/tutor.jpg",
-  },
-];
-
 export default function HomePage() {
-  const [subject, setSubject] = useState("");
-  const [location, setLocation] = useState("");
-  const [level, setLevel] = useState("");
-  const [aiLoading, setAiLoading] = useState(false);
-  const [aiResult, setAiResult] = useState<string | null>(null);
+  const router = useRouter();
 
-  function handleSearch(e: React.FormEvent) {
-    e.preventDefault();
-    // In a real app we'd call an API here.
-    setAiResult(
-      `Tìm gia sư cho "${subject || "Môn học"}" ${
-        level ? `- ${level}` : ""
-      } ở ${location || "Toàn quốc"}`
-    );
-  }
+  const handleFindTutor = () => {
+    router.push("/search");
+  };
 
-  function handleAiMatch() {
-    setAiLoading(true);
-    setAiResult(null);
-    // Simulate an AI match call
-    setTimeout(() => {
-      setAiLoading(false);
-      setAiResult(
-        `Gợi ý: ${sampleTutors[0].name} - ${sampleTutors[0].subject} (${sampleTutors[0].price}). Bạn có thể bắt đầu chat để tinh chỉnh yêu cầu.`
-      );
-    }, 1100);
-  }
+  const handleGetSupport = () => {
+    router.push("/signup");
+  };
 
   return (
     <div className="min-h-screen text-slate-900">
@@ -136,11 +92,18 @@ export default function HomePage() {
               </p>
 
               <div className="space-x-3 animate-fade space-y-3 lg:space-y-0">
-                <Button className="text-base md:text-lg p-6 md:p-8 rounded-4xl">
+                <Button
+                  onClick={handleFindTutor}
+                  className="text-base md:text-lg p-6 md:p-8 rounded-4xl"
+                >
                   Tìm gia sư ngay
                 </Button>
-                <Button className="text-base md:text-lg p-6 md:p-8 rounded-4xl">
-                  Hỗ trợ tìm gia sư 24/7
+                <Button
+                  onClick={handleGetSupport}
+                  variant="outline"
+                  className="text-base md:text-lg p-6 md:p-8 rounded-4xl"
+                >
+                  Đăng ký miễn phí
                 </Button>
               </div>
             </div>
